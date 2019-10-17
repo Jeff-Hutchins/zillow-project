@@ -56,7 +56,7 @@ def get_zillow_data_from_mysql():
 
 def clean_zillow_data(df):
     df = df.replace({'fips': 6037.0}, 'Los Angeles County')
-    df = df.replace({'fips': 6059.0}, 'Orange Count')
+    df = df.replace({'fips': 6059.0}, 'Orange County')
     df = df.replace({'fips': 6111.0}, 'Ventura County')
     df = df.dropna()
     return df
