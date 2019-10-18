@@ -11,8 +11,8 @@ from statsmodels.formula.api import ols
 from math import sqrt
 
 
-def plot_residuals(x, y, dataframe):
-    return sns.residplot(x, y, dataframe)
+def plot_residuals(X, y, dataframe):
+    return sns.residplot(X, y, dataframe)
 
 
 def regression_errors(y, yhat):
