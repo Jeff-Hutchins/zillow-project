@@ -17,11 +17,6 @@ def plot_variable_pairs(df):
     plt.show()
 
 
-def months_to_years(df):
-    df['tenure_years']=round(df.tenure//12).astype('category')
-    return df
-
-
 def plot_categorical_and_continuous_vars(df):
     plt.figure(figsize=(16,8))
     plt.subplot(1,3,1)
