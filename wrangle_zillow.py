@@ -41,6 +41,7 @@ def get_zillow_data_from_mysql():
        taxvaluedollarcnt as house_value,
        propertylandusedesc as property_description,
        propertylandusetypeid property_id,
+       lotsizesquarefeet as lot_size,
        fips
     FROM predictions_2017
     JOIN properties_2017 USING(id)
