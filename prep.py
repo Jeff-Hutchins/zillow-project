@@ -42,7 +42,7 @@ def get_zillow_data_from_mysql():
        propertylandusedesc as property_description,
        propertylandusetypeid property_id,
        lotsizesquarefeet as lot_size,
-       fips
+       fips as county
     FROM predictions_2017
     JOIN properties_2017 USING(id)
     JOIN propertylandusetype USING(propertylandusetypeid)
@@ -56,9 +56,9 @@ def get_zillow_data_from_mysql():
     return df
 
 def clean_zillow_data(df):
-    df = df.replace({'fips': 6037.0}, 'Los Angeles County')
-    df = df.replace({'fips': 6059.0}, 'Orange County')
-    df = df.replace({'fips': 6111.0}, 'Ventura County')
+    df = df.replace({'county': 6037.0}, 'Los Angeles County')
+    df = df.replace({'county': 6059.0}, 'Orange County')
+    df = df.replace({'county': 6111.0}, 'Ventura County')
     df = df.dropna()
     return df
   
